@@ -1,0 +1,8 @@
+.classpath
+.project
+.classpath
+.settings
+.buildpath
+metadata
+assets/*
+protected/runtime/*

@@ -1,0 +1,1 @@
+<img src="images/w/20130204_day.png" width=600px height=600px/>
