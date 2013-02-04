@@ -39,7 +39,7 @@
 </div>
 
 <div style="text-align:center;margin:0 auto;">
-	<img id="mp" src="<?php echo Yii::app()->request->baseUrl;?>/images/w/<?php echo $vdate?>_<?php echo $type?>.png" width=600px height=600px/>
+	<img id="mp" src="<?php echo Yii::app()->request->baseUrl;?>:81/images/w/<?php echo $vdate?>_<?php echo $type?>.png" width=600px height=600px/>
 </div>
 
 
