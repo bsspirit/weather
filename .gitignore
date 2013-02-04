@@ -3,6 +3,6 @@
 .classpath
 .settings
 .buildpath
-metadata
+metadata/gen
 assets/*
 protected/runtime/*
