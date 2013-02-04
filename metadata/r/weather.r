@@ -8,7 +8,8 @@
 ########################################################
 
 rm(list=ls())
-
+path='/root/deploy/weather/images/w/'
+setwd(path)
 #=====================================================
 getWeather<-function (x){
   library(RCurl)
@@ -102,6 +103,6 @@ loadDate(date)
 
 #date<-as.Date('20130202',format='%Y%m%d')
 data<-read.csv(file=filename(date),header=TRUE,fileEncoding="utf-8", encoding="utf-8")
-path=''
+
 weather(data,type='high',output=TRUE,path=path)
 weather(data,type='low',output=TRUE,path=path)
