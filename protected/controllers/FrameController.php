@@ -46,6 +46,15 @@ class FrameController extends Controller{
 			case 'night':
 				$content.='中国各省夜间气温';
 				break;
+			case 'humidity':
+				$content.='中国各省大气湿度';
+				break;
+			case 'pressure':
+				$content.='中国各省大气压';
+				break;
+			case 'visibility':
+				$content.='中国各省能见度';
+			break;
 		}
 		$content.=' - 关注@Conan_Z @每日中国天气 '.'http://apps.weibo.com/chinaweatherapp';
 		$tmp=$api->upload($content,$pic);
