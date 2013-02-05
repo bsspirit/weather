@@ -55,7 +55,7 @@ $("#publishDate").change(function(){
 	var cdate=date.replaceAll('-', '');
 	if(cdate>today){
 		alert('选择日期不能大于当前日期！');
-	}else if(cdate<20120201){
+	}else if(cdate<20130201){
 		alert('选择日期不能小于2013-02-01，应用上线时间！');
 	}else{
 		var type=$('.current').parent().attr('type');
