@@ -51,8 +51,12 @@ String.prototype.replaceAll  = function(s1,s2){
 $("#publishDate").change(function(){
 	var date=$("#publishDate").val();
 	var today=$('#today').attr('date');
-	if(date.replaceAll('-', '')>today){
+
+	var cdate=date.replaceAll('-', '');
+	if(cdate>today){
 		alert('选择日期不能大于当前日期！');
+	}else if(cdate<20120201){
+		alert('选择日期不能小于2013-02-01，应用上线时间！');
 	}else{
 		var type=$('.current').parent().attr('type');
 		window.location.href='?date='+date+"&type="+type;
