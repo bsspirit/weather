@@ -36,9 +36,14 @@ loadDate<-function(date){
   write.csv(w,file=filename(date),row.names=FALSE,fileEncoding="utf-8")
 }
 #=====================================================
-getColors<-function(mapdata,prov,temp,breaks){
+getColors<-function(map,prov,temp,breaks){
+  #name change to ADCODE99
+  ADCODE99<-read.csv(file="ADCODE99.csv",header=TRUE,fileEncoding="utf-8", encoding="utf-8")
+  fc<-function(x){ADCODE99$ADCODE99[which(x==ADCODE99$prov)]}
+  code<-sapply(data$prov,fc)
+  
   f=function(x,y) ifelse(x %in% y,which(y==x),0);
-  colIndex=sapply(mapdata$NAME,f,prov);
+  colIndex=sapply(map$ADCODE99,f,code);
   arr <- findInterval(temp, breaks)
   return(arr[colIndex])
 }
