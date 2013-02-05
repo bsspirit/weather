@@ -23,11 +23,11 @@
 		气温：<a href="javascript:void(0);" <?php echo $type=='day'?'':'onclick="forward(this)"';?> type='day'><span <?php echo $type=='day'?'class="current"':'class="btn"'?>>白天</span></a>
 		<a href="javascript:void(0);" <?php echo $type=='night'?'':'onclick="forward(this)"';?> type='night'><span <?php echo $type=='night'?'class="current"':'class="btn"'?>>夜间</span></a>
 	</div>
-	<!-- 
 	<div class="row">
-		温度&nbsp;&nbsp;&nbsp;&nbsp;风力&nbsp;&nbsp;&nbsp;&nbsp;空气质量
+		大气：<a href="javascript:void(0);" <?php echo $type=='humidity'?'':'onclick="forward(this)"';?> type='humidity'><span <?php echo $type=='humidity'?'class="current"':'class="btn"'?>>湿度</span></a>
+		<a href="javascript:void(0);" <?php echo $type=='pressure'?'':'onclick="forward(this)"';?> type='pressure'><span <?php echo $type=='pressure'?'class="current"':'class="btn"'?>>大气压</span></a>
+		<a href="javascript:void(0);" <?php echo $type=='visibility'?'':'onclick="forward(this)"';?> type='visibility'><span <?php echo $type=='visibility'?'class="current"':'class="btn"'?>>能见度</span></a>
 	</div>
-	 -->
 </div>
 
 <div class="view">
