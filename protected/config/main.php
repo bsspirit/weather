@@ -71,5 +71,7 @@ return array(
 		'WB_AKEY'=>	'2943868431',
 		'WB_SKEY'=> 'eea1441573905fa63db499ef7ea35141',
 		'WB_CALLBACK_URL'=>'http://loc.weather.com/frame/callback',
+		#'loc'=>'D:/workspace/php/weather/images/w/',
+		'loc'=>'/root/deploy/weather/images/w/',
 	),
 );

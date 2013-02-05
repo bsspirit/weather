@@ -36,7 +36,8 @@ class FrameController extends Controller{
 	
 	public function actionSend(){
 		$api=Yii::app()->session['api'];
-		$pic='D:/workspace/php/weather/images/w/'.str_replace("-",'',$_REQUEST['date']).'_'.$_REQUEST['type'].'.png';
+		$loc=Yii::app()->params['loc'];
+		$pic=$loc.str_replace("-",'',$_REQUEST['date']).'_'.$_REQUEST['type'].'.png';
 		$content=$_REQUEST['date'].' - ';
 		switch($_REQUEST['type']){
 			case 'day':
