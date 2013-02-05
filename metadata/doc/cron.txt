@@ -1,0 +1,1 @@
+1 0 * * *  R CMD BATCH /root/deploy/weather/metadata/r/weather.r
