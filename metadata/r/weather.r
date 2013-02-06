@@ -94,6 +94,7 @@ weather<-function(data=data,type='high',output=FALSE,path=''){
   }
   text(100,58, title,cex=2)
   text(105,54,format(date,"%Y-%m-%d"))
+  text(98,65,paste('每日中国天气','http://http://apps.weibo.com/chinaweatherapp'))
   text(120,-8,paste('provided by The Weather Channel',format(date, "%Y-%m-%d %H:%M")),cex=0.8)
   
   #=======================================
@@ -159,6 +160,7 @@ atmosphere<-function(data=data,type='humidity',output=FALSE,path=''){
   }
   text(100,58, title,cex=2)
   text(105,54,format(date,"%Y-%m-%d"))
+  text(98,65,paste('每日中国天气','http://http://apps.weibo.com/chinaweatherapp'))
   text(120,-8,paste('provided by The Weather Channel',format(date, "%Y-%m-%d %H:%M")),cex=0.8)
   
   #=======================================
@@ -218,6 +220,7 @@ summary<-function(data=data,output=FALSE,path=''){
   }
   text(100,58, title,cex=2)
   text(105,54,format(date,"%Y-%m-%d"))
+  text(98,65,paste('每日中国天气','http://http://apps.weibo.com/chinaweatherapp'))
   text(120,-8,paste('provided by The Weather Channel',format(date, "%Y-%m-%d %H:%M")),cex=0.8)
   
   #=======================================
