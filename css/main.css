@@ -256,7 +256,7 @@ div.search-form
 	background: #C00;
 }
 
-.row{margin-bottom:3px;vertical-align: middle;}
+.row{margin-bottom:3px;padding:3px;vertical-align: middle;}
 .l{float:left;}
 .r{float:right;}
 .c{clear:both;}

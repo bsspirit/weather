@@ -1,4 +1,10 @@
 <div class="view">
+	<div class="row">
+		<a href="/"><span class="bigbtn">返回首页</span></a>
+	</div>
+</div>
+
+<div class="view">
 	<p><a href="http://apps.weibo.com/chinaweatherapp"><span style="color:#007898;">每日中国天气</span></a>(http://apps.weibo.com/chinaweatherapp)是基于新浪微博的天气信息工具。
 	通过中国地图的方式，呈现出各省的天气状况。包括白天气温，夜间气温，大气湿度，大气压，大气能见度等热力图。 
 	<p/>
