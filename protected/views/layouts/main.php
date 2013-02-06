@@ -50,9 +50,5 @@
 		<p>专注社交网络和微博研究，精通数据挖掘和机器学习，提供专业的本土社会化数据分析解决方案.</p>
 	</div>
 </div>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2a1be2d93e4268ab8e7d9e31ccc6f148' type='text/javascript'%3E%3C/script%3E"));
-</script>
 </body>
 </html>
