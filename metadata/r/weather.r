@@ -24,14 +24,14 @@ getWeather<-function (x){
   rising<-as.numeric(sapply(ans, xmlGetAttr, "rising"))
   
   ans<-getNodeSet(doc, "//item/yweather:condition")
-  text<-sapply(ans, xmlGetAttr, "text")
+  code<-sapply(ans, xmlGetAttr, "code")
   
   ans<-getNodeSet(doc, "//item/yweather:forecast[1]")
   low<-as.numeric(sapply(ans, xmlGetAttr, "low"))
   high<-as.numeric(sapply(ans, xmlGetAttr, "high"))
  
-  print(paste(x,'==>',low,high,text,humidity,visibility,pressure,rising))
-  cbind(low,high,text,humidity,visibility,pressure,rising)
+  print(paste(x,'==>',low,high,code,humidity,visibility,pressure,rising))
+  cbind(low,high,code,humidity,visibility,pressure,rising)
 }
 filename<-function(date=Sys.time()){
   paste(format(date, "%Y%m%d"),".csv",sep="")
@@ -56,6 +56,7 @@ getColors<-function(map,prov,temp,breaks){
   f=function(x,y) ifelse(x %in% y,which(y==x),0);
   colIndex=sapply(map$ADCODE99,f,code);
   arr <- findInterval(temp, breaks)
+  arr[which(is.na(arr))]=19
   return(arr[colIndex])
 }
 
@@ -117,12 +118,11 @@ weather<-function(data=data,type='high',output=FALSE,path=''){
 atmosphere<-function(data=data,type='humidity',output=FALSE,path=''){
   library("RColorBrewer")
   colors <- c(rev(brewer.pal(9,"Blues")),brewer.pal(9,"YlOrRd"))
-  #breaks=seq(-36,36,4)
   
   if(type=='humidity') {
     temp<-data$humidity
     title<-"中国各省大气湿度"
-    breaks<-seq(10,118,6)
+    breaks<-seq(0,100,6)
     colors<-rev(colors)
     areaCol<-50
     sign<-'%'
@@ -138,15 +138,16 @@ atmosphere<-function(data=data,type='humidity',output=FALSE,path=''){
   }else if(type=='visibility'){
     temp<-data$visibility
     title<-"中国各省能见度"
-    breaks<-seq(1,15,1)
-    colors<-rev(colors)
+    breaks<-seq(0,18,1)
+    colors<-c(rev(colors),'#9d9d9d')
     areaCol<-6
     sign<-''
     ofile<-paste(format(date,"%Y%m%d"),"_visibility.png",sep="")
-  }else{
-#     temp<-data$low 
-#     title<-"中国各省夜间气温"
-#     ofile<-paste(format(date,"%Y%m%d"),"_night.png",sep="")
+  }else if(type=='code'){
+    temp<-data$code 
+    title<-"中国各省天气概况"
+    ofile<-paste(format(date,"%Y%m%d"),"_code.png",sep="")
+        
   }
   
   if(output)png(file=paste(path,ofile,sep=''),width=600,height=600)
