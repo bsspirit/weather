@@ -257,3 +257,6 @@ div.search-form
 }
 
 .row{margin-bottom:3px;vertical-align: middle;}
+.l{float:left;}
+.r{float:right;}
+.c{clear:both;}

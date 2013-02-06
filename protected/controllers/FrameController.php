@@ -6,6 +6,10 @@ class FrameController extends Controller{
 		$this->render('index');
 	}
 	
+	public function actionAbout(){
+		$this->render('about');
+	}
+	
 	/**
 	 * 授权页
 	 */
@@ -54,7 +58,7 @@ class FrameController extends Controller{
 				break;
 			case 'visibility':
 				$content.='中国各省能见度';
-			break;
+				break;
 		}
 		$content.=' - 关注@Conan_Z @每日中国天气 '.'http://apps.weibo.com/chinaweatherapp';
 		$tmp=$api->upload($content,$pic);

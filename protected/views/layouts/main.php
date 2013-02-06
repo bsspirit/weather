@@ -43,7 +43,8 @@
 	<?php echo $content; ?>
 	<div id="footer">
 		<p>Copyright &copy; bsspirit@gmail.com |
-		   由 <a target="_blank" href="http://weibo.com/dotabook"><span style="color:#007898;">@Conan_Z</span></a> 开发及运营
+		   由 <a target="_blank" href="http://weibo.com/dotabook"><span style="color:#007898;">@Conan_Z</span></a> 开发及运营&nbsp;&nbsp;
+		 <a href="/frame/about">关于作者</a>
 		</p>
 		<p>作者的其他应用：<a target="_blank" href="http://www.fens.me"><span style="color:#007898;">@晒粉丝</span></a></p>
 		<p>专注社交网络和微博研究，精通数据挖掘和机器学习，提供专业的本土社会化数据分析解决方案.</p>
