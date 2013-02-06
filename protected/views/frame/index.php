@@ -1,6 +1,6 @@
 <?php
 	$date=empty($_REQUEST['date'])?date("Y-m-d"):$_REQUEST['date'];
-	$type=empty($_REQUEST['type'])?'day':$_REQUEST['type'];
+	$type=empty($_REQUEST['type'])?'code':$_REQUEST['type'];
 	$vdate=str_replace("-",'',$date);
 	echo '<div id="today" date="'.date("Ymd").'"></div>';
 ?>
@@ -19,6 +19,9 @@
 			 ));?>
 	</div>
 	<hr/>
+	<div class="row">
+		总体：<a href="javascript:void(0);" <?php echo $type=='code'?'':'onclick="forward(this)"';?> type='code'><span <?php echo $type=='code'?'class="current"':'class="btn"'?>>概况</span></a>	
+	</div>
 	<div class="row">
 		气温：<a href="javascript:void(0);" <?php echo $type=='day'?'':'onclick="forward(this)"';?> type='day'><span <?php echo $type=='day'?'class="current"':'class="btn"'?>>白天</span></a>
 		<a href="javascript:void(0);" <?php echo $type=='night'?'':'onclick="forward(this)"';?> type='night'><span <?php echo $type=='night'?'class="current"':'class="btn"'?>>夜间</span></a>
