@@ -94,6 +94,7 @@ weather<-function(data=data,type='high',output=FALSE,path=''){
   }
   text(100,58, title,cex=2)
   text(105,54,format(date,"%Y-%m-%d"))
+  text(120,-8,paste('provided by The Weather Channel',format(date, "%Y-%m-%d %H:%M")),cex=0.8)
   
   #=======================================
   for(row in 1:nrow(data)){
@@ -143,11 +144,6 @@ atmosphere<-function(data=data,type='humidity',output=FALSE,path=''){
     areaCol<-6
     sign<-''
     ofile<-paste(format(date,"%Y%m%d"),"_visibility.png",sep="")
-  }else if(type=='code'){
-    temp<-data$code 
-    title<-"中国各省天气概况"
-    ofile<-paste(format(date,"%Y%m%d"),"_code.png",sep="")
-        
   }
   
   if(output)png(file=paste(path,ofile,sep=''),width=600,height=600)
@@ -163,6 +159,7 @@ atmosphere<-function(data=data,type='humidity',output=FALSE,path=''){
   }
   text(100,58, title,cex=2)
   text(105,54,format(date,"%Y-%m-%d"))
+  text(120,-8,paste('provided by The Weather Channel',format(date, "%Y-%m-%d %H:%M")),cex=0.8)
   
   #=======================================
   for(row in 1:nrow(data)){
