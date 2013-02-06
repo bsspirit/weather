@@ -59,6 +59,9 @@ class FrameController extends Controller{
 			case 'visibility':
 				$content.='中国各省能见度';
 				break;
+			case 'code':
+				$content.='中国各省天气概况';
+				break;
 		}
 		$content.=' - 关注@Conan_Z @每日中国天气 '.'http://apps.weibo.com/chinaweatherapp';
 		$tmp=$api->upload($content,$pic);
