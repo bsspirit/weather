@@ -83,7 +83,7 @@
 		<a href="javascript:void(0);" onclick="share()">
 			<span class="bigbtn">分享到微博</span>
 		</a>
-		<span style="margin-left:200px;color:gray;">谢谢你的支持，我会做得更好！</span>
+		<span style="margin-left:180px;color:gray;">谢谢你的支持，我会做得更好！</span>
 	</div>
 	<div class="c"></div>
 </div>
