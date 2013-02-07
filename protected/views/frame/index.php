@@ -69,7 +69,7 @@
 	</div>
 	 -->
 	<div class="row">
-		<textarea id=tweet rows="3" cols="73"><?php echo getContent($date,$type);?></textarea>
+		<textarea id=tweet rows="3" class="span-13"><?php echo getContent($date,$type);?></textarea>
 		&nbsp;
 		<a href="javascript:void(0);" onclick="at(this)" title="@每日中国天气">
 			<img src="images/logo-80.png" width="55" alt="@每日中国天气"/>
