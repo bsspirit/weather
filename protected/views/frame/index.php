@@ -60,6 +60,10 @@
 	</div>
 </div>
 
+<div style="text-align:center;margin:0 auto;">
+	<img id="mp" src="<?php echo Yii::app()->request->baseUrl;?>/images/w/<?php echo $vdate?>_<?php echo $type?>.png" width=600px height=600px/>
+</div>
+
 <div class="view ">
 	<!-- 
 	<div class="row">
@@ -86,10 +90,6 @@
 		<span style="margin-left:180px;color:gray;">谢谢你的支持，我会做得更好！</span>
 	</div>
 	<div class="c"></div>
-</div>
-
-<div style="text-align:center;margin:0 auto;">
-	<img id="mp" src="<?php echo Yii::app()->request->baseUrl;?>/images/w/<?php echo $vdate?>_<?php echo $type?>.png" width=600px height=600px/>
 </div>
 
 <script type="text/javascript">
