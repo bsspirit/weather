@@ -272,3 +272,5 @@ div.search-form
 	-webkit-font-smoothing: antialiased;
 	border-radius: 10px;
 }
+
+textarea.myspan1{padding:5px;width:498px;}
