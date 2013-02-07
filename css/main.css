@@ -134,6 +134,8 @@ div.view
 	padding: 10px;
 	margin: 10px 0;
 	border: 1px solid #C9E0ED;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 10px;
 }
 
 div.breadcrumbs
@@ -260,3 +262,13 @@ div.search-form
 .l{float:left;}
 .r{float:right;}
 .c{clear:both;}
+
+.mybox{
+	width:480px;
+	margin:3px;
+	padding:10px;
+	vertical-align:middle;
+	border:1px solid #ddd;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 10px;
+}

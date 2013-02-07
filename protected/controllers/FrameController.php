@@ -41,30 +41,9 @@ class FrameController extends Controller{
 	public function actionSend(){
 		$api=Yii::app()->session['api'];
 		$loc=Yii::app()->params['loc'];
-		$pic=$loc.str_replace("-",'',$_REQUEST['date']).'_'.$_REQUEST['type'].'.png';
-		$content=$_REQUEST['date'].' - ';
-		switch($_REQUEST['type']){
-			case 'day':
-				$content.='中国各省白天气温';
-				break;
-			case 'night':
-				$content.='中国各省夜间气温';
-				break;
-			case 'humidity':
-				$content.='中国各省大气湿度';
-				break;
-			case 'pressure':
-				$content.='中国各省大气压';
-				break;
-			case 'visibility':
-				$content.='中国各省能见度';
-				break;
-			case 'code':
-				$content.='中国各省天气概况';
-				break;
-		}
-		$content.=' - 关注@Conan_Z @每日中国天气 '.'http://apps.weibo.com/chinaweatherapp';
-		$tmp=$api->upload($content,$pic);
+		$pic=$loc.str_replace("-",'',$_POST['date']).'_'.$_POST['type'].'.png';
+		$tmp=$api->upload($_POST['tweet'],$pic);
+		#echo  $_POST['date'].'=='.$_POST['type'].'=='.$_POST['tweet'];
 		echo empty($tmp['id'])?0:1;
 	}
 	
