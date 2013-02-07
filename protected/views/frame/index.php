@@ -77,6 +77,7 @@
 		<a href="javascript:void(0);" onclick="at(this)" title="@Conan_Z">
 			<img src="images/my.jpg" width=55 alt="@Conan_Z"/>
 		</a>&nbsp;
+		<div class="c"></div>
 	</div>
 	<div class="row">
 		<a href="javascript:void(0);" onclick="share()">
