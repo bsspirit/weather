@@ -130,20 +130,21 @@ var forward=function(obj){
 var at=function(obj){
 	var title = $(obj).attr("title");
 	var tobj=$('#tweet');
-	var tweet = tobj.text();
+	var tweet = tobj.val();
 	if(tweet.contains(title)){
 		tweet=tweet.replace(title, '');
 	}else{
 		tweet+=' '+title;
 	}
-	tobj.text(tweet);
+	tobj.val(tweet);
 }
 
 var share=function(){
 	var date=$("#publishDate").val();
 	var type=$('.current').parent().attr('type');
-	var tweet=$('#tweet').text();
-	$.ajax({
+	var tweet=$('#tweet').val();
+	alert(tweet);
+	/*$.ajax({
 	  url: '/frame/send',
 	  type:'POST',
 	  data:{tweet:tweet,date:date,type:type},
@@ -154,6 +155,6 @@ var share=function(){
 			  alert("发布失败!");
 		  }
 	  }
-	});
+	});*/
 }
 </script>
