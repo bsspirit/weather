@@ -143,8 +143,7 @@ var share=function(){
 	var date=$("#publishDate").val();
 	var type=$('.current').parent().attr('type');
 	var tweet=$('#tweet').val();
-	alert(tweet);
-	/*$.ajax({
+	$.ajax({
 	  url: '/frame/send',
 	  type:'POST',
 	  data:{tweet:tweet,date:date,type:type},
@@ -155,6 +154,6 @@ var share=function(){
 			  alert("发布失败!");
 		  }
 	  }
-	});*/
+	});
 }
 </script>
